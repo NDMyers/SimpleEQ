@@ -35,10 +35,10 @@
           uiLastY_Normal="470" uiopen_Normal="1">
     <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
             version="1.0.0" file="/home/ndmyers/.vst3/SimpleEQ.vst3" uniqueId="fa97eae7"
-            isInstrument="0" fileTime="1884ab997a8" infoUpdateTime="1886e7a7f21"
+            isInstrument="0" fileTime="1884ab997a8" infoUpdateTime="1886e90daaa"
             numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
             uid="acf8a400"/>
-    <STATE>622.VMjLgTl....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9LCNx3BTEwlXmAiQisVRxHlKt.kKG4RUPIUQTMkKDYlKuEkQtDzLPEDRqESVt0DUioWPnEEdUYkXtf0UXIWUWkkKDAkPD4hKt3hKt3BRN0DTt3RUPIUQTMkKDYlKuEkQtDzMPEDRqESVt0DUioWP3Qkb3XjXqEjYic1cVM1ZAAkKIAkKt3hKt3hKt3hKt3hKTETRUAUSAAkKBolQY4BQPMTQ1oWXxzDUioWPnEEdUYkXtf0UXIWUWkkKDAkPD4hKt3hKt3RRJsDTt3RUPIUQTMkKDYlKuEkQtDzLPEDS3DyXCU0QiYFSEEVcAcUVtf0UXIWUWkkKDAkPD4hKt3hKt3hKt3hKt3RUPIUQTMkKDYlKuEkQtDjbPEDTUYEVwEDZQgWUVIlKXcEVxU0UY4BQPIDQt3hKt3hKtX2XHAkKtTETRUDUS4BQl4xaQYjKAIGTAAUUVgUbAgWTmsFag4BVWgkbUcUVtPDTBQjKt3hKt3hKt3hKt3hKUAkTEQ0TtPjYt7VTF4RPy.UPPUkUXEWPRQELEYTXuE0Uj4BVWgkbUcUVtPDTBQjKt3hKt3hKt3xJO4hKt3hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEVtPDTtHzZGI1YMIiXtPDTtLjKPcjKt3hKt3hKt3haTU0PUQDU3sFaicVTWkEQEYzXmEDOujzPu0Fbu4VYtQmO77hUSQ0LPwVcmklaSQWXzUlO..</STATE>
+    <STATE>622.VMjLgTl....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9LCNx3BTEwlXmAiQisVRxHlKt.kKG4RUPIUQTMkKDYlKuEkQtDzLPEDRqESVt0DUioWPnEEdUYkXtf0UXIWUWkkKDAkPD4hKt3hKt3hKhMDTt3RUPIUQTMkKDYlKuEkQtDzMPEDRqESVt0DUioWP3Qkb3XjXqEjYic1cVM1ZAAkKIAkKt3hKt3hKt3hKt3hKTETRUAUSAAkKBolQY4BQPMTQ1oWXxzDUioWPnEEdUYkXtf0UXIWUWkkKDAkPD4hKt3hKt3RRJsDTt3RUPIUQTMkKDYlKuEkQtDzLPEDS3DyXCU0QiYFSEEVcAcUVtf0UXIWUWkkKDAkPD4hKt3hKt3hKt3hKt3RUPIUQTMkKDYlKuEkQtDjbPEDTUYEVwEDZQgWUVIlKXcEVxU0UY4BQPIDQt3hKt3hKtX2XHAkKtTETRUDUS4BQl4xaQYjKAIGTAAUUVgUbAgWTmsFag4BVWgkbUcUVtPDTBQjKt3hKt3hKt3hKt3hKUAkTEQ0TtPjYt7VTF4RPy.UPPUkUXEWPRQELEYTXuE0Uj4BVWgkbUcUVtPDTBQjKt3hKt3hKt3xJO4hKt3hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEVtPDTtHzZGI1YMIiXtPDTtLjKPcjKt3hKt3hKt3haTU0PUQDU3sFaicVTWkEQEYzXmEDOujzPu0Fbu4VYtQmO77hUSQ0LPwVcmklaSQWXzUlO..</STATE>
     <LAYOUT>
       <INPUTS>
         <BUS index="0" layout="L R"/>
@@ -51,7 +51,7 @@
   <FILTER uid="6" x="0.57625" y="0.4047619047619048" useARA="0">
     <PLUGIN name="AudioFilePlayer" format="VST3" category="Fx" manufacturer="Matkat Music LLC"
             version="1.0.0" file="/home/ndmyers/.vst3/AudioFilePlayer.vst3"
-            uniqueId="79fe81c" isInstrument="0" fileTime="1884b78b958" infoUpdateTime="1886e7a7f21"
+            uniqueId="79fe81c" isInstrument="0" fileTime="1884b78b958" infoUpdateTime="1886e90daaa"
             numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
             uid="acfeaab3"/>
     <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
