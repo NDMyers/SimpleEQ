@@ -144,7 +144,6 @@ private:
     }
 };
 
-
 enum Slope 
 {
     Slope_12,
