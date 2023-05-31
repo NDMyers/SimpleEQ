@@ -35,7 +35,7 @@
           uiLastY_Normal="470" uiopen_Normal="1">
     <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
             version="1.0.0" file="/home/ndmyers/.vst3/SimpleEQ.vst3" uniqueId="fa97eae7"
-            isInstrument="0" fileTime="1884ab997a8" infoUpdateTime="1886f84b1a7"
+            isInstrument="0" fileTime="1884ab997a8" infoUpdateTime="1887072113f"
             numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
             uid="acf8a400"/>
     <STATE>622.VMjLgTl....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9LCNx3BTEwlXmAiQisVRxHlKt.kKG4RUPIUQTMkKDYlKuEkQtDzLPEDRqESVt0DUioWPnEEdUYkXtf0UXIWUWkkKDAkPD4hKt3hKt3hXJkDTt3RUPIUQTMkKDYlKuEkQtDzMPEDRqESVt0DUioWP3Qkb3XjXqEjYic1cVM1ZAAkKIAkKt3hKt3hKt3hKt3hKTETRUAUSAAkKBolQY4BQPMTQ1oWXxzDUioWPnEEdUYkXtf0UXIWUWkkKDAkPD4hKt3hKt3hKPMDTt3RUPIUQTMkKDYlKuEkQtDzLPEDS3DyXCU0QiYFSEEVcAcUVtf0UXIWUWkkKDAkPD4hKt3hKt3hKt3hKt3RUPIUQTMkKDYlKuEkQtDjbPEDTUYEVwEDZQgWUVIlKXcEVxU0UY4BQPIDQt3hKt3hKtDDQLAkKtTETRUDUS4BQl4xaQYjKAIGTAAUUVgUbAgWTmsFag4BVWgkbUcUVtPDTBQjKt3hKt3hKtX1PP4hKUAkTEQ0TtPjYt7VTF4RPy.UPPUkUXEWPRQELEYTXuE0Uj4BVWgkbUcUVtPDTBQjKt3hKt3hKt3xJO4hKt3hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEVtPDTtHzZGI1YMIiXtPDTtLjKPcjKt3hKt3hKt3haTU0PUQDU3sFaicVTWkEQEYzXmEDOujzPu0Fbu4VYtQmO77hUSQ0LPwVcmklaSQWXzUlO..</STATE>
@@ -48,11 +48,11 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="6" x="0.57625" y="0.4047619047619048" useARA="0" uiLastX_Normal="1099"
-          uiLastY_Normal="452" uiopen_Normal="1">
+  <FILTER uid="6" x="0.57625" y="0.4047619047619048" useARA="0" uiLastX_Normal="526"
+          uiLastY_Normal="246" uiopen_Normal="1">
     <PLUGIN name="AudioFilePlayer" format="VST3" category="Fx" manufacturer="Matkat Music LLC"
             version="1.0.0" file="/home/ndmyers/.vst3/AudioFilePlayer.vst3"
-            uniqueId="79fe81c" isInstrument="0" fileTime="1884b78b958" infoUpdateTime="1886f84b1a7"
+            uniqueId="79fe81c" isInstrument="0" fileTime="1884b78b958" infoUpdateTime="1887072113f"
             numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
             uid="acfeaab3"/>
     <STATE>279.VMjLg3P....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9DiL03BTIISX1UEaho2ZVkUdAAkKAwDUigWRWkEcQ0VTucmUY4BQPkTQ2HjV0AiUYU2LFk0bqcUV30jLKMWUxH1aMECU0kkQiISQrI1Z3HzTAc1ZKISQrMlKt3hKt3hKt3hKt3hKtQUUCUEQTg2ZrM1YQcUVDUjQicVPP4RPHQEY1UTLhkWPP4RPL4hKi4hKt3hKt3hKtXlTU0DUQAURWoULEYzXqEEUXoWQFwyKIMzasA2atUlaz4COuX0TTMCTrU2Yo41TzEFck4C.</STATE>
