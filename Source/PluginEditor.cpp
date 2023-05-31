@@ -8,6 +8,11 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+
+auto pastelRed = juce::Colour(228u, 107u, 107u);
+auto pastelLilac = juce::Colour(228u, 200u, 239u);
+
+//==============================================================================
 void LookAndFeel::drawRotarySlider(juce::Graphics& g, 
                                   int x, 
                                   int y, 
@@ -22,10 +27,12 @@ void LookAndFeel::drawRotarySlider(juce::Graphics& g,
 
   auto bounds = Rectangle<float>(x, y, width, height);
 
-  g.setColour(Colour(228u, 200u, 239u));  // pastel lilac color
+  // Color of knobs
+  g.setColour(pastelRed); 
   g.fillEllipse(bounds);
 
-  g.setColour(Colours::black); 
+  // Color of knob outline
+  g.setColour(Colours::lightgrey); 
   g.drawEllipse(bounds, 1.f);
 
   if( auto* rswl = dynamic_cast<RotarySliderWithLabels*>(&slider))
@@ -57,10 +64,10 @@ void LookAndFeel::drawRotarySlider(juce::Graphics& g,
     r.setCentre(bounds.getCentre());
 
     // current value box color
-    g.setColour(Colour(228,200u,239u));
+    g.setColour(pastelRed);
     g.fillRect(r);
 
-    g.setColour(Colours::black);
+    g.setColour(Colours::white);
     g.drawFittedText(text, r.toNearestInt(), juce::Justification::centred, 1);
   }
 
@@ -292,11 +299,13 @@ void ResponseCurveComponent::paint (juce::Graphics& g)
     {
       responseCurve.lineTo(responseArea.getX() + i, map(mags[i]));
     }
-
-    g.setColour(Colours::orange);
+  
+    // Color of freq. response curve boundary box outline
+    g.setColour(pastelRed);
     g.drawRoundedRectangle(getRenderArea().toFloat(), 4.f, 1.f);
 
-    g.setColour(Colours::white);
+    // Color of the frequency response curve
+    g.setColour(pastelRed);
     g.strokePath(responseCurve, PathStrokeType(2.f));
 }
 
@@ -311,6 +320,7 @@ void ResponseCurveComponent::resized()
   background = Image(Image::PixelFormat::RGB, getWidth(), getHeight(), true);
 
   Graphics g(background);
+  g.fillAll(Colours::white);
 
   // Create array to loop through and convert these frequencies to 
   // window space and then draw them as vertical lines
@@ -336,7 +346,7 @@ void ResponseCurveComponent::resized()
     xs.add(left + width * normX);
   }
 
-  g.setColour(Colours::dimgrey);
+  g.setColour(Colours::lightgrey);
   for( auto x : xs )
   // for( auto f :freqs )
   {
@@ -355,12 +365,12 @@ void ResponseCurveComponent::resized()
   {
     auto y = jmap(gDb, -24.f, 24.f, float(bottom), float(top));
     //g.drawHorizontalLine(y, 0, getWidth());
-    g.setColour(gDb == 0.f ? Colours::black : Colours::darkgrey );
+    g.setColour(gDb == 0.f ? Colours::black : Colours::lightgrey );
     g.drawHorizontalLine(y, left, right);
   }
 
   // g.drawRect(getAnalysisArea());
-  g.setColour(Colours::lightgrey);
+  g.setColour(Colours::black);
   const int fontHeight = 10;
   g.setFont(fontHeight);
 
@@ -388,6 +398,27 @@ void ResponseCurveComponent::resized()
     r.setSize(textWidth, fontHeight);
     r.setCentre(x, 0);
     r.setY(1);
+
+    g.drawFittedText(str, r, juce::Justification::centred, 1);
+  }
+
+  for( auto gDb : gain )
+  {
+    auto y = jmap(gDb, -24.f, 24.f, float(bottom), float(top));
+
+    String str;
+    if( gDb > 0 )
+      str << "+";
+    str << gDb;
+
+    auto textWidth = g.getCurrentFont().getStringWidth(str);
+
+    Rectangle<int> r;
+    r.setSize(textWidth, fontHeight);
+    r.setX(getWidth() - textWidth);
+    r.setCentre(r.getCentreX(), y);
+
+    g.setColour(gDb == 0.f? Colours::black : Colours::darkslategrey);
 
     g.drawFittedText(str, r, juce::Justification::centred, 1);
   }
@@ -475,7 +506,7 @@ void SimpleEQAudioProcessorEditor::paint (juce::Graphics& g)
 {
     using namespace juce;
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (Colour(150u, 150u, 150u));
+    g.fillAll (Colours::white);
 }
 
 void SimpleEQAudioProcessorEditor::resized()
