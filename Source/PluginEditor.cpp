@@ -328,13 +328,15 @@ void PathProducer::process(juce::Rectangle<float> fftBounds, double sampleRate)
 
 void ResponseCurveComponent::timerCallback()
 {
+  // If analysis is turned off, don't do this stuff
+  if( shouldShowFFTAnalysis )
+  {
+    auto fftBounds = getAnalysisArea().toFloat();
+    auto sampleRate = audioProcessor.getSampleRate();
 
-  auto fftBounds = getAnalysisArea().toFloat();
-  auto sampleRate = audioProcessor.getSampleRate();
-
-  leftPathProducer.process(fftBounds, sampleRate);
-  rightPathProducer.process(fftBounds, sampleRate);
-
+    leftPathProducer.process(fftBounds, sampleRate);
+    rightPathProducer.process(fftBounds, sampleRate);
+  }
 
   if( parametersChanged.compareAndSetBool(false, true))
   {
@@ -438,19 +440,23 @@ void ResponseCurveComponent::paint (juce::Graphics& g)
       responseCurve.lineTo(responseArea.getX() + i, map(mags[i]));
     }
 
-    auto leftChannelFFTPath = leftPathProducer.getPath();
-    leftChannelFFTPath.applyTransform(AffineTransform().translation(responseArea.getX(), responseArea.getY()));
+    // If analyzer is enabled, grab paths and draw them
+    if( shouldShowFFTAnalysis )
+    {
+      auto leftChannelFFTPath = leftPathProducer.getPath();
+      leftChannelFFTPath.applyTransform(AffineTransform().translation(responseArea.getX(), responseArea.getY()));
 
-    // Color of FFT data
-    g.setColour(Colours::black);
-    g.strokePath(leftChannelFFTPath, PathStrokeType(1.f));
+      // Color of FFT data
+      g.setColour(Colours::black);
+      g.strokePath(leftChannelFFTPath, PathStrokeType(1.f));
 
-    auto rightChannelFFTPath = rightPathProducer.getPath();
-    rightChannelFFTPath.applyTransform(AffineTransform().translation(responseArea.getX(), responseArea.getY()));
+      auto rightChannelFFTPath = rightPathProducer.getPath();
+      rightChannelFFTPath.applyTransform(AffineTransform().translation(responseArea.getX(), responseArea.getY()));
 
-    g.setColour(Colours::lightskyblue);
-    g.strokePath(rightChannelFFTPath, PathStrokeType(1.f));
-  
+      g.setColour(Colours::lightskyblue);
+      g.strokePath(rightChannelFFTPath, PathStrokeType(1.f));
+    }
+
     // Color of freq. response curve boundary box outline
     g.setColour(pastelRed);
     g.drawRoundedRectangle(getRenderArea().toFloat(), 4.f, 1.f);
@@ -691,6 +697,15 @@ SimpleEQAudioProcessorEditor::SimpleEQAudioProcessorEditor (SimpleEQAudioProcess
 
         comp->highCutFreqSlider.setEnabled( !bypassed );
         comp->highCutSlopeSlider.setEnabled( !bypassed );
+      }
+    };
+
+    analyzerEnabledButton.onClick = [safePtr]()
+    {
+      if( auto* comp = safePtr.getComponent() )
+      {
+        auto enabled = comp->analyzerEnabledButton.getToggleState();
+        comp->responseCurveComponent.toggleAnalysisEnablement(enabled);
       }
     };
 
